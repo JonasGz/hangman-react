@@ -1,6 +1,6 @@
-
 import EventEmitter from 'eventemitter3';
 
+import { EventBus } from '../types';
 import { GuessService, GuessServiceEvents } from './application/guess';
 import { MatchService, MatchServiceEvents } from './application/match';
 import { PlayerService, PlayerServiceEvents } from './application/player';
@@ -9,7 +9,6 @@ import { InMemoryGuessRepository } from './repository/in-memory/guess';
 import { InMemoryMatchRepository } from './repository/in-memory/match';
 import { InMemoryPlayerRepository } from './repository/in-memory/player';
 import { InMemoryRoundRepository } from './repository/in-memory/round';
-import { EventBus } from '../types';
 
 const eventEmitter: EventBus<MatchServiceEvents & PlayerServiceEvents & RoundServiceEvents & GuessServiceEvents> = new EventEmitter();
 const playerRepository = new InMemoryPlayerRepository();

@@ -1,6 +1,7 @@
 import "./app.scss";
 import { ButtonC } from "./components/ButtonC";
 import { InputFocusBlur } from "./components/InputFocusBlur";
+import "./utils/index";
 
 function App() {
   return (
